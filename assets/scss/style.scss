@@ -1,0 +1,72 @@
+@import './mixin.scss';
+
+* {
+    @include body;
+}
+.header{
+    @include header;
+    h1,h2{
+        @include headline;
+    }
+}
+.nav_links{
+    @include navlinks;
+}
+li{
+    @include list;
+}
+a{
+    @include anchor;
+}
+.main{
+    @include main;
+}
+.section_text{
+    h3{
+        @include sectionh3;
+    }
+}
+.section_images{
+    @include sectionimg;
+}
+.section_text, .section_images{
+    @include section3;
+}
+.section_images{
+    @include sectionimg;
+}
+img{
+    @include image;
+}
+.aside{
+    @include aside;
+}
+.first_aside, .second_aside, .third_aside, .fourth_aside{
+    @include aside1-4;
+}
+.footer_links{
+    @include footerleft;
+}
+.footer{
+    @include footer;
+}
+@media screen and (min-width: 600px){
+    .section_images {
+    	display: flex;
+    	flex-flow: row wrap;
+	}
+
+	.section_text {
+    	width: 70%;
+	}
+
+	.aside {
+    	display: flex;
+    	flex-flow: row wrap;
+	}
+
+	.first_aside, .second_aside, .third_aside, .fourth_aside {
+    	width: 45%;
+    	margin: 0.5rem;
+	}
+}
